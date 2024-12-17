@@ -15,13 +15,19 @@ Some of the metrics such as **Coupling Between Objects (CBO)**, **Depth of Inher
 
 ---
 
+## Metrics basic, derived, hierarhical not hierarchical
+
+
 ## Metrics and Formulas  
 
 ### **LCOMOnto - Lack of Cohesion in Methods**  
 Measures the semantic and conceptual relatedness of classes.  
 \[
 \text{LCOMOnto} = \frac{\sum \text{Length(path(|C(leaf)i|))}}{m}
-\]  
+\]
+$$
+\text{LCOMOnto} = \frac{\sum \text{Length(path(|C(\text{leaf})_i|))}}{m}
+$  
 - **Where**: Length(path|C(leaf)i|) is the length of the path from the leaf class *i* to **Thing**, and *m* is the total number of paths.  
 
 | Metric/Score | 1   | 2       | 3       | 4       | 5      |
