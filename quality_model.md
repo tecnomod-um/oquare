@@ -11,6 +11,7 @@ The current OQuaRE version includes 8 characteristics and 29 subcharacteristics,
 
 Additionally, **structural features** are introduced to evaluate aspects not covered by SQuaRE, such as consistency, formalization, redundancy, or tangledness.
 
+
 ---
 
 ### Structural

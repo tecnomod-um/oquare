@@ -4,12 +4,6 @@ Ontology Quality Requirement and Evaluation Framework (OQuaRE). This repository 
 
 # OQuaRE Framework
 
-## Introduction
-
-Each **quality subcharacteristic** in OQuaRE is evaluated using a series of **metrics**, which provide both qualitative and quantitative insights into the ontology’s design, implementation, and usability.
-
-The following sections provide more details:
-
 ## Table of Contents  
 1. [The Ontology Quality Evaluation Framework (OQuaRE)](#the-ontology-quality-evaluation-framework-oquare)  
 2. [The Quality Model Division](#the-oquare-quality-model-division)  
