@@ -1,5 +1,5 @@
 
-[OQuaRE](../oquare/README.md) 
+[OQuaRE](README.md) 
 
  [The Quality Evaluation Division](quality_evaluation.md) provide more detail
 

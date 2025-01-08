@@ -6,9 +6,9 @@ Ontology Quality Requirement and Evaluation Framework (OQuaRE). This repository 
 
 ## Table of Contents  
 1. [Ontology Quality Evaluation Framework (OQuaRE)](README.md)  
-2. [OQuaRE Quality Model Division](quality_model.md)  
-3. [OQuaRE Quality Metrics Division](quality_metrics.md)
-4. [OQuaRE Quality Evaluation Division](quality_evaluation.md)    
+2. [OQuaRE Quality Model Division](oquare_docs/quality_model.md)  
+3. [OQuaRE Quality Metrics Division](oquare_docs/quality_metrics.md)
+4. [OQuaRE Quality Evaluation Division](oquare_docs/quality_evaluation.md)    
 
 ---
 
@@ -19,20 +19,20 @@ OQuaRE is a systematic framework designed to evaluate the quality of ontologies 
 The **Quality Framework** is divided into five main divisions which can be identified in the figure. The **OQuaRE Requirements Division** focuses on assisting in specifying quality requirements. The **OQuaRE Quality Model Division** addresses the internal and external quality of the software product by defining key characteristics and sub-characteristics. The **OQuaRE Quality Metrics Division** establishes base and derived measures to evaluate quality. The **OQuaRE Quality Evaluation Division** defines the processes required for quality evaluation. Lastly, the **OQuaRE Quality Management Division** focuses on overseeing and managing quality-related activities to ensure continuous improvement and compliance with established standards.
 
 <div align="center">
-  <img src="oquare.png" alt="OQuaRE" width="600">
+  <img src="oquare_docs/images/oquare.png" alt="OQuaRE" width="600">
 </div>
 
 ## OQuaRE Quality Model Division
 
 Is composed of multiple **characteristics** and **subcharacteristics** relevant to ontologies, including **structural features**, **functional adequacy**, **compatibility**, **transferability**, **maintainability**, and **operability** [1][2][3]. :contentReference[oaicite:1]{index=1} OQuaRE introduces a **structural characteristic** to account for ontology-specific aspects, not covered by SQuaRE, such as **formalization**, **redundancy**, **consistency**, and **tangledness** [4]. The Quality Model section provide more detail 
-- [Quality Model](quality_model.md)
+- [Quality Model](oquare_docs/quality_model.md)
 
 ## QOuaRE Quality Metric Division
 
  Is composed of base and derived measurements. Base measurements correspond to metrics that can be measured directly on the ontology, such as the number of classes, the number of relations, etc., whereas derived ones combine some base measurements.
  
  The Quality Model section provide more detail 
-- [Quality Metrics](quality_metrics.md)
+- [Quality Metrics](oquare_docs/quality_metrics.md)
 
 ## OQuaRE Quality Evaluation Division 
 
@@ -49,9 +49,9 @@ The values of the metrics are transformed into **quality scores** by applying **
 ---
 
 The following sections explain the **Quality Model** and **Quality Metrics** and **scalign functions** in detail, providing a comprehensive understanding of how these elements are applied in the OQuaRE framework.
-1. [Quality Model](quality_model.md)
-2. [Quality Metrics](quality_metrics.md)
-3. [Quality Evaluation](quality_evaluation.md)
+1. [Quality Model](oquare_docs/quality_model.md)
+2. [Quality Metrics](oquare_docs/quality_metrics.md)
+3. [Quality Evaluation](oquare_docs/quality_evaluation.md)
 ---
 
 ## References
