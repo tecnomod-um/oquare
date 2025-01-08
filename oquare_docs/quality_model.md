@@ -1,4 +1,4 @@
-[OQuaRE](README.md) 
+[OQuaRE](../oquare/README.md)
 
 ## The OQuaRE Quality Model
 
@@ -16,7 +16,7 @@ The **Functional adequacy** subcharacteristics are the intended uses for ontolog
 
 
 <div align="center">
-  <img src="OQuaREQualityModel.png" alt="OQuaRE" width="700">
+  <img src="oquare_docs/images/OQuaREQualityModel.png" alt="OQuaRE" width="700">
 </div> 
 ---
 

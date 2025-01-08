@@ -1,4 +1,4 @@
-[OQuaRE](README.md) 
+[OQuaRE](../oquare/README.md)
 
 # OQuaRE Quality Metrics
 
