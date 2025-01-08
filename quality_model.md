@@ -1,3 +1,5 @@
+[OQuaRE](README.md) 
+
 ## The OQuaRE Quality Model
 
 The current OQuaRE version includes 8 characteristics (7 from SQuaRE and 1 especific for ontologies) and 29 subcharacteristics, the characateriscts from SQuaRE are: 
@@ -6,8 +8,7 @@ The current OQuaRE version includes 8 characteristics (7 from SQuaRE and 1 espec
 - Operability  
 - Maintainability  
 - Compatibility  
-- Transferability  
-- Performance efficiency  
+- Transferability    
 
 The **Structural Characteristic** is introduced to evaluate aspects not covered by SQuaRE, such as consistency, formalization, redundancy, or tangledness. 
 
@@ -109,3 +110,10 @@ The capability of ontologies to be modified for changes in environments, in requ
 
 ### REFERENCES
 [1]  STEVENS, R. and LORD, P. (2009): Application of ontologies in bioinformatics. In: BERNUS, P., BŁAŻEWICS, J., SCHMIDT, G., SHAW, M., STAAB, S. and STUDER, R. (eds.) Handbook on Ontologies. Springer Berlin Heidelberg.
+
+### Publications
+
+ **A. Duque-Ramos**, J. T. Fernández-Breis, R. Stevens, N. Aussenac-Gilles.  
+   *OQuaRE: a SQuaRE-based approach for evaluating the quality of ontologies.*  
+   *Journal of Research and Practice in Information Technology*, Volume **43**, 2011, Pages 159–173.  
+   DOI: [10.1.1.363.7967](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.363.7967)

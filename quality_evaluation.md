@@ -1,4 +1,6 @@
 
+[OQuaRE](README.md) 
+
  [The Quality Evaluation Division](quality_evaluation.md) provide more detail
 
  OQuaRE offers two types of **scaling functions** [2], which differ in how the metric values are transformed into quality scores, providing complementary information:
@@ -31,3 +33,10 @@ There are two types of static scale
 
 ## Dynamic scaling Functions
 
+
+## Publications
+
+1. **Astrid Duque-Ramos**, Quesada-Martínez, M., Iniesta-Moreno, M., Fernández-Breis, J.T., Stevens, R.  
+   *Supporting the analysis of ontology evolution processes through the combination of static and dynamic scaling functions in OQuaRE.*  
+   *Journal of Biomedical Semantics*, Volume **7**, Nº 63, 2016.  
+   DOI: [10.1186/s13326-016-0091-z](https://doi.org/10.1186/s13326-016-0091-z)

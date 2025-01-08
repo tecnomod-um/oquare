@@ -1,3 +1,5 @@
+[OQuaRE](README.md) 
+
 # OQuaRE Quality Metrics
 
 OQuaRE permits the definition of the quality model in terms of **quality characteristics**. This standard suggests a series of quality characteristics to measure quality. Each quality characteristic has associated **subcharacteristics**, and each subcharacteristic has a set of **Quality Metrics**
@@ -249,3 +251,10 @@ $$WMCOnto2 = \sum path(|C(leaf)ᵢ|) / \sum|C(leaf)ᵢ|$$
 [4] Tartir, S., and Arpinar, I.B. (2007). *Ontology evaluation and ranking using OntoQA*. ICSC 2007: International Conference on Semantic Computing, Proceedings, 185–192.  
 
 [5] Gangemi, A., Catenacci, C., Ciaramita, M., and Lehmann, J. (2006). *Modelling ontology evaluation and validation*. Semantic Web: Research and Applications, Proceedings, 4011: 140–154.
+
+## Publications
+
+ **A. Duque-Ramos**, J. T. Fernández-Breis, R. Stevens, N. Aussenac-Gilles.  
+   *OQuaRE: a SQuaRE-based approach for evaluating the quality of ontologies.*  
+   *Journal of Research and Practice in Information Technology*, Volume **43**, 2011, Pages 159–173.  
+   DOI: [10.1.1.363.7967](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.363.7967)
