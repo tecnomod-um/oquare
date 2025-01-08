@@ -1,34 +1,32 @@
-# Quality Metrics in OQuaRE
+# OQuaRE Quality Metrics
 
-OQuaRE permits the definition of the quality model in terms of **quality characteristics**. This standard suggests a series of quality characteristics to measure quality. Each quality characteristic has associated **subcharacteristics**, and each subcharacteristic has a set of **primitive measures** (metrics).  
+OQuaRE permits the definition of the quality model in terms of **quality characteristics**. This standard suggests a series of quality characteristics to measure quality. Each quality characteristic has associated **subcharacteristics**, and each subcharacteristic has a set of **Quality Metrics**
 
-### **Metric Notation**  
+ **Quality Metrics** are composed of base and derived measurements. Base measurements correspond to metrics that can be measured directly on the ontology, such as the number of classes, the number of relations, etc., whereas derived ones combine some base measurements.
+
+For the the definition of the base metrics, the following notation has been adopted:  
+
 ### Metric Notation  
-- **C<sub>1</sub>, C<sub>2</sub>, …, C<sub>n</sub>**: Classes of the ontology.  
-- **RC<sub>1</sub>, RC<sub>2</sub>, …, RC<sub>k</sub>**: Relationships of class C<sub>i</sub>.  
-- **PC<sub>1</sub>, PC<sub>2</sub>, …, PC<sub>z</sub>**: Properties of class C<sub>i</sub>.  
-- **IC<sub>1</sub>, IC<sub>2</sub>, …, IC<sub>m</sub>**: Individuals of class C<sub>i</sub>.  
-- **SupC<sub>1</sub>, SupC<sub>2</sub>, …, SupC<sub>m</sub>**: Direct superclasses of a given class C.  
-- **Thing**: Root class of the ontology.  
-     
-Some of the metrics such as **Coupling Between Objects (CBO)**, **Depth of Inheritance Tree (DIT)**, **Number Of Children (NOC)**, **Response For a Class (RFC)**, and **Weighted Method Count (WMC)** were selected from **Software Engineering** and particularly **Object-Oriented Programming (OOP)** [1][2]. These were adapted to ontologies due to shared concepts such as **classes, individuals**, and **properties**. Additionally, metrics developed by the **ontology engineering community** were reused, especially those addressing **structural properties** [3][4][5].
+- $C_1, C_2, ... C_n$ are the Classes of the ontology.  
+- $C_1, RC_2, …, RC_k$ are the Relationships of class C_i.  
+- $PC_1, PC_2, …, PC_z$ are the Properties of class C_i. 
+- $UPC_1, UPC_2, …, UPC_y$ are the Usage of Properties (Object and data) for the property PC_i.  
+- $IC_1, IC_2, …, IC_m$ are the Individuals of class C_i.  
+- $SupC_1, SupC_2, …, SupC_m$ are the Direct superclasses of a given class C.  
+- $Thing$ is the Root class of the ontology.  
 
----
+## Derived metrics ##
+ A set of 19 derived metrics is defined in OQuaRE; some of them have been reused and adapted from both the ontology and software engineering communities. **Coupling Between Objects (CBO)**, **Depth of Inheritance Tree (DIT)**, **Number Of Children (NOC)**, **Response For a Class (RFC)**, and **Weighted Method Count (WMC)** were adapted to ontologies from **Software Engineering** and, in particular, **Object-Oriented Programming (OOP)** (Chidamber and Kemerer, 1994)[1] and Number Of local Methods (NOM) by (Li and Henry, 1993)[2]. Some metrics, especially those addressing **structural properties**, such as those proposed by Yao, Orme, and Etzkorn (2005)[3]; Tartir and Arpinar (2007)[4]; and Gangemi, Catenacci, Ciaramita, and Lehmann [5], were reused from the **ontology engineering community**.
+ 
+## Derived Metrics and Formulas  
 
-## Metrics basic, derived, hierarhical not hierarchical
+### **LCOMOnto - Lack of Cohesion in Methods** 
+Mean lenght of all paht from leaf classes to **Thing**..  
+$$LCOMOnto = \frac{\sum {Length(path(|C({leaf})_i|))}}{{\sum {path(|C({leaf})_i|)}}}$$
 
-
-## Metrics and Formulas  
-
-### **LCOMOnto - Lack of Cohesion in Methods**  
-Measures the semantic and conceptual relatedness of classes.  
-\[
-\text{LCOMOnto} = \frac{\sum \text{Length(path(|C(leaf)i|))}}{m}
-\]
-$$
-\text{LCOMOnto} = \frac{\sum \text{Length(path(|C(\text{leaf})_i|))}}{m}
-$  
-- **Where**: Length(path|C(leaf)i|) is the length of the path from the leaf class *i* to **Thing**, and *m* is the total number of paths.  
+- **Where**:  
+  - ${Length(path(|C({leaf})_i|))}$ is the length of the path from the leaf class *i* to **Thing**.  
+  - *m* is the total number of paths. 
 
 | Metric/Score | 1   | 2       | 3       | 4       | 5      |
 |--------------|------|---------|---------|---------|--------|
@@ -36,12 +34,14 @@ $
 
 ---
 
-### **DITOnto - Depth of Subsumption Hierarchy**  
-Length of the largest path from **Thing** to a leaf class.  
-\[
-\text{DITOnto} = \text{Max} \left( \sum D|C_i| \right)
-\]  
-- **Where**: D|C_i| is the length of the path from the *i*-th leaf class to **Thing**.
+### **DITOnto - Depth of Subsumption Hierarchy**
+
+The length of the largest path from **Thing** to a leaf class.
+
+$${DITOnto} = {Max} \left( \sum D|C_i| \right)$$
+
+- **Where**:  
+  - $D|C_i|$ is the length of the path from the *i*-th leaf class to **Thing**.
 
 | Metric/Score | 1   | 2       | 3       | 4       | 5      |
 |--------------|------|---------|---------|---------|--------|
@@ -51,9 +51,8 @@ Length of the largest path from **Thing** to a leaf class.
 
 ### **NACOnto - Number of Ancestor Classes**  
 Mean number of ancestor classes per leaf class.  
-\[
-\text{NACOnto} = \frac{\sum |SupC(Leaf)_i|}{\sum |C(leaf)_i|}
-\]  
+
+$${NACOnto} = \frac{\sum |SupC(Leaf)_i|}{\sum |C(leaf)_i|}$$  
 
 | Metric/Score | 1   | 2       | 3       | 4       | 5      |
 |--------------|------|---------|---------|---------|--------|
@@ -63,9 +62,8 @@ Mean number of ancestor classes per leaf class.
 
 ### **NOCOnto - Number of Children Classes**  
 Number of direct subclasses divided by the number of classes minus the number of leaf classes.  
-\[
-\text{NOCOnto} = \frac{\sum |RC_i|}{\left( \sum |C_i| - \sum |C(leaf)_i| \right)}
-\]  
+
+$${NOCOnto} = \frac{\sum |RC_i|}{\left( \sum |C_i| - \sum |C(leaf)_i| \right)}$$  
 
 | Metric/Score | 1   | 2       | 3       | 4       | 5      |
 |--------------|------|---------|---------|---------|--------|
@@ -75,22 +73,26 @@ Number of direct subclasses divided by the number of classes minus the number of
 
 ### **CBOOnto - Coupling Between Objects**  
 Number of related classes.  
-\[
-\text{CBOOnto} = \frac{\sum |SupC_i|}{\left( \sum |C_i| - |R_{\text{Thing}}| \right)}
-\]  
+$${CBOOnto} = \frac{\sum |SupC_i|}{\left( \sum |C_i| - |R_{{Thing}}| \right)}$$  
 
 | Metric/Score | 1    | 2        | 3        | 4        | 5       |
 |--------------|-------|----------|----------|----------|---------|
 | CBOOnto      | >12   | (8-12]   | (6-8]    | (3-6]    | [1-3]   |
 
 ---
+### **CBOOnto2 - Coupling Between Objects**  
+Number of related classes.  
+
+$${CBOOnto2} = \frac{\sum |SupC_i|}{\sum |C_i|}$$  
+
+| Metric/Score | 1    | 2        | 3        | 4        | 5       |
+|--------------|-------|----------|----------|----------|---------|
+| CBOOnto2      | >12   | (8-12]   | (6-8]    | (3-6]    | [1-3]   |
 
 ### **RFCOnto - Response for a Class**  
 Number of properties directly accessible from a class, including data and object properties.  
 
-\[
-\text{RFCOnto} = \frac{\sum |PC<sub>i</sub>| + \sum |SupC<sub>i</sub>|}{\sum |C<sub>i</sub>|}
-\]  
+$${RFCOnto} = \frac{\sum |PC_i| + \sum |SupC_i|}{\sum |C_i|}$$  
 
 | Metric/Score | 1    | 2        | 3        | 4        | 5       |
 |--------------|-------|----------|----------|----------|---------|
@@ -98,12 +100,10 @@ Number of properties directly accessible from a class, including data and object
 
 ---
 
-### **NOMOnto - Number of Properties**  
-Mean number of properties (object and data) per class.  
+### **NOMOnto - Number of Usage of Properties**  
+Mean number of usage  of properties per class.  
 
-\[
-\text{NOMOnto} = \frac{\sum |PC<sub>i</sub>|}{\sum |C<sub>i</sub>|}
-\]  
+$${NOMOnto} = \frac{\sum |UPC_i|}{\sum |C_i|}$$  
 
 | Metric/Score | 1   | 2       | 3       | 4       | 5      |
 |--------------|------|---------|---------|---------|--------|
@@ -111,9 +111,9 @@ Mean number of properties (object and data) per class.
 
 ---
 ### **PROnto - Properties Richness**  
-Measures the ratio of object and data property usages to the total number of subclass relationships and properties.
+Measures the number of relationships defined in the ontology divided by the the number of relationships and usage of properties 
 
-PROnto = ∑|PCᵢ| / (∑|RCᵢ| + ∑|PCᵢ|)  
+$$PROnto = \sum|RC_i| / (\sum|RC_i| + \sum|UPC_i|)$$  
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
@@ -124,7 +124,7 @@ PROnto = ∑|PCᵢ| / (∑|RCᵢ| + ∑|PCᵢ|)
 ### **INROnto - Relationships per Class**  
 Mean number of relationships (subclasses) per class.  
 
-INROnto = ∑|RCᵢ| / ∑|Cᵢ|  
+$$INROnto = \sum|RC_i| / \sum|C_i|$$  
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
@@ -135,7 +135,7 @@ INROnto = ∑|RCᵢ| / ∑|Cᵢ|
 ### **POnto - Ancestors per Class**  
 Mean number of direct ancestors per class.
 
-POnto = ∑|SupCᵢ| / ∑|Cᵢ|  
+$$POnto = \sum|SupC_i| / \sum|C_i|$$  
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
@@ -146,7 +146,7 @@ POnto = ∑|SupCᵢ| / ∑|Cᵢ|
 ### **CROnto - Class Richness**  
 Mean number of individuals per class.
 
-CROnto = ∑|ICᵢ| / ∑|Cᵢ|  
+$$CROnto = \sum|IC_i| / \sum|C_i|$$  
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
@@ -155,9 +155,12 @@ CROnto = ∑|ICᵢ| / ∑|Cᵢ|
 ---
 
 ### **AROnto - Attribute Richness**  
-Measures the number of restrictions (attributes) of the ontology per class.  
+Measures the number of attributes of the ontology per class.  
 
-AROnto = ∑|AttCᵢ| / ∑|Cᵢ|  
+$$AROnto = \sum|AttC_i| / \sum|C_i|$$  
+
+- **Where**:  
+  - $AttC_i$ is the object property that applies to a class *i* defined in the object property domain and its subclasses
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
@@ -166,9 +169,9 @@ AROnto = ∑|AttCᵢ| / ∑|Cᵢ|
 ---
 
 ### **ANOnto - Annotation Richness**  
-Mean number of annotation properties per class.  
+Mean number of annotation properties (label and comments) per class .  
 
-ANOnto = ∑|ACᵢ| / ∑|Cᵢ|  
+$$ANOnto = \sum|AC_i| / \sum|C_i|$$  
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
@@ -179,11 +182,11 @@ ANOnto = ∑|ACᵢ| / ∑|Cᵢ|
 ### **TMOnto - Tangledness**  
 Measures the mean number of classes with more than one direct ancestor.  
 
-TMOnto = ∑|C(DP)ᵢ| / (∑|Cᵢ| - 1)  
+$$TMOnto = \sum|C(DP)ᵢ| / (\sum|C_i| - 1)$$  
 
 - **Where**:  
   - **C(DP)ᵢ**: Classes with more than one direct parent.  
-  - **Cᵢ**: Total number of classes.  
+  - **C_i**: Total number of classes.  
 
 | Metric/Score | 1     | 2        | 3        | 4        | 5        |
 |--------------|-------|----------|----------|----------|----------|
@@ -194,7 +197,7 @@ TMOnto = ∑|C(DP)ᵢ| / (∑|Cᵢ| - 1)
 ### **TMOnto2 - Tangledness2**  
 Measures the mean number of direct ancestors for classes with more than one direct ancestor.  
 
-TMOnto2 = ∑|Sup(CDP)ᵢ| / ∑|CDPᵢ|  
+$$TMOnto2 = \sum|Sup(CDP)ᵢ| / \sum|CDPᵢ|$$  
 
 - **Where**:  
   - **Sup(CDP)ᵢ**: Superclasses of classes with more than one direct parent.  
@@ -207,13 +210,13 @@ TMOnto2 = ∑|Sup(CDP)ᵢ| / ∑|CDPᵢ|
 ---
 
 ### **WMCOnto - Weighted Method per Class**  
-Measures the mean length of the path from **Thing** to a leaf class.  
+Measures the mean length of paths from a leaf class to the **Thing**.   
 
-WMCOnto = ∑ Length(path(|C(leaf)ᵢ|)) / ∑|C(leaf)ᵢ|  
+$$WMCOnto = \sum Length(path(|C(leaf)ᵢ|)) / \sum|C(leaf)ᵢ|$$  
 
 - **Where**:  
-  - **Length(path(|C(leaf)ᵢ|))**: Length of the path from the *i*-th leaf class to **Thing**.  
-  - **C(leaf)ᵢ**: Leaf classes in the ontology.  
+  - $Length(path(|C(leaf)ᵢ|))$ is the length of the path from the *i*-th leaf class to **Thing**.  
+  - **C(leaf)ᵢ** is the leaf classes in the ontology.  
 
 | Metric/Score | 1     | 2        | 3        | 4        | 5        |
 |--------------|-------|----------|----------|----------|----------|
@@ -222,13 +225,12 @@ WMCOnto = ∑ Length(path(|C(leaf)ᵢ|)) / ∑|C(leaf)ᵢ|
 ---
 
 ### **WMCOnto2 - Weighted Method per Class 2**  
-Measures the mean number of paths from **Thing** to a leaf class per leaf class.  
-
-WMCOnto2 = ∑ path(|C(leaf)ᵢ|) / ∑|C(leaf)ᵢ|  
+Measures the mean number of paths from a leaf class to the class **Thing**. 
+$$WMCOnto2 = \sum path(|C(leaf)ᵢ|) / \sum|C(leaf)ᵢ|$$  
 
 - **Where**:  
-  - **path(|C(leaf)ᵢ|)**: Number of paths from the *i*-th leaf class to **Thing**.  
-  - **C(leaf)ᵢ**: Leaf classes in the ontology.  
+  - $path(|C(leaf)ᵢ|)$ is the number of paths from the *i*-th leaf class to **Thing**.  
+  - **C(leaf)ᵢ** is the leaf classes in the ontology.  
 
 | Metric/Score | 1     | 2        | 3        | 4        | 5        |
 |--------------|-------|----------|----------|----------|----------|
