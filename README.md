@@ -14,7 +14,7 @@ Ontology Quality Requirement and Evaluation Framework (OQuaRE). This repository 
 
 ## Ontology Quality Evaluation Framework (OQuaRE)
   
-OQuaRE is a systematic framework designed to evaluate the quality of ontologies by adapting the **ISO/IEC 25000:2005 SQuaRE** standard, for Software Product Quality Requirements and Evaluation (SQuaRE). :contentReference[oaicite:0]{index=0} [2]
+OQuaRE is a systematic framework designed to evaluate the quality of ontologies by adapting the **ISO/IEC 25000:2005 SQuaRE** standard, for Software Product Quality Requirements and Evaluation (SQuaRE). [2]
 
 The **Quality Framework** is divided into five main divisions which can be identified in the figure. The **OQuaRE Requirements Division** focuses on assisting in specifying quality requirements. The **OQuaRE Quality Model Division** addresses the internal and external quality of the software product by defining key characteristics and sub-characteristics. The **OQuaRE Quality Metrics Division** establishes base and derived measures to evaluate quality. The **OQuaRE Quality Evaluation Division** defines the processes required for quality evaluation. Lastly, the **OQuaRE Quality Management Division** focuses on overseeing and managing quality-related activities to ensure continuous improvement and compliance with established standards.
 
@@ -24,7 +24,7 @@ The **Quality Framework** is divided into five main divisions which can be ident
 
 ## OQuaRE Quality Model Division
 
-Is composed of multiple **characteristics** and **subcharacteristics** relevant to ontologies, including **structural features**, **functional adequacy**, **compatibility**, **transferability**, **maintainability**, and **operability** [1][2][3]. :contentReference[oaicite:1]{index=1} OQuaRE introduces a **structural characteristic** to account for ontology-specific aspects, not covered by SQuaRE, such as **formalization**, **redundancy**, **consistency**, and **tangledness** [4]. The Quality Model section provide more detail 
+Is composed of multiple **characteristics** and **subcharacteristics** relevant to ontologies, including **structural features**, **functional adequacy**, **compatibility**, **transferability**, **maintainability**, and **operability** [1][2][3]. OQuaRE introduces a **structural characteristic** to account for ontology-specific aspects, not covered by SQuaRE, such as **formalization**, **redundancy**, **consistency**, and **tangledness** [4]. The Quality Model section provide more detail 
 - [Quality Model](oquare_docs/quality_model.md)
 
 ## QOuaRE Quality Metric Division
@@ -36,7 +36,7 @@ Is composed of multiple **characteristics** and **subcharacteristics** relevant 
 
 ## OQuaRE Quality Evaluation Division 
 
-OQuaRE serves as a critical tool for researchers and developers by systematically identifying the **strengths** and **weaknesses** of ontologies. This enables improvements in their design, fosters reusability, and enhances interoperability within semantic web applications and domain-specific knowledge systems [1][5]. :contentReference[oaicite:2]{index=2}
+OQuaRE serves as a critical tool for researchers and developers by systematically identifying the **strengths** and **weaknesses** of ontologies. This enables improvements in their design, fosters reusability, and enhances interoperability within semantic web applications and domain-specific knowledge systems [1][5]. 
 
 Evaluating an ontology requires to measure the **quality characteristics** and  **quality subcharacteristic** in OQuaRE is evaluated using a series of **quality metrics**, which provide both qualitative and quantitative insights into the ontology’s design, implementation, and usability. 
 
