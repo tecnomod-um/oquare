@@ -252,9 +252,3 @@ $$WMCOnto2 = \sum path(|C(leaf)ᵢ|) / \sum|C(leaf)ᵢ|$$
 
 [5] Gangemi, A., Catenacci, C., Ciaramita, M., and Lehmann, J. (2006). *Modelling ontology evaluation and validation*. Semantic Web: Research and Applications, Proceedings, 4011: 140–154.
 
-## Publications
-
- **A. Duque-Ramos**, J. T. Fernández-Breis, R. Stevens, N. Aussenac-Gilles.  
-   *OQuaRE: a SQuaRE-based approach for evaluating the quality of ontologies.*  
-   *Journal of Research and Practice in Information Technology*, Volume **43**, 2011, Pages 159–173.  
-   DOI: [10.1.1.363.7967](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.363.7967)

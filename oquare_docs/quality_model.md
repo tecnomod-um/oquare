@@ -16,7 +16,7 @@ The **Functional adequacy** subcharacteristics are the intended uses for ontolog
 
 
 <div align="center">
-  <img src="images/OQuaREQualityModel.png" alt="OQuaRE" width="700">
+  <img src="images/OQuaREQualityModel.png" alt="OQuaRE" width="300">
 </div> 
 ---
 
@@ -113,7 +113,4 @@ The capability of ontologies to be modified for changes in environments, in requ
 
 ### Publications
 
- **A. Duque-Ramos**, J. T. Fernández-Breis, R. Stevens, N. Aussenac-Gilles.  
-   *OQuaRE: a SQuaRE-based approach for evaluating the quality of ontologies.*  
-   *Journal of Research and Practice in Information Technology*, Volume **43**, 2011, Pages 159–173.  
-   DOI: [10.1.1.363.7967](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.363.7967)
+
