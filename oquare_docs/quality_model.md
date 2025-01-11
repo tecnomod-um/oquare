@@ -16,7 +16,7 @@ The **Functional adequacy** subcharacteristics are the intended uses for ontolog
 
 
 <div align="center">
-  <img src="images_oquare_docs" alt="OQuaRE" width="300">
+  <img src="images_oquare_docs/OQuaREQualityModel.png" alt="OQuaRE" width="300">
 </div> 
 ---
 
