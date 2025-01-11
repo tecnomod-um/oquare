@@ -11,7 +11,7 @@ Ontology Quality Requirement and Evaluation Framework (OQuaRE). This repository 
    - [OQuaRE Quality Model Division](oquare_docs/quality_model.md)  
    - [OQuaRE Quality Metrics Division](oquare_docs/quality_metrics.md)  
    - [OQuaRE Quality Evaluation Division](oquare_docs/quality_evaluation.md)   
-2. [OQuaRE Ontology](oquare_Ontology/README.md) 
+2. [OQuaRE Ontology](oquare_ontology/README.md) 
 3. [Software resources](oquare_software_resources/README.md)
     - [GitHub Actions: Ontology Quality Evaluation and Evolution ]
     - [OQuaRE Metrics for an Ontology Corpus]
