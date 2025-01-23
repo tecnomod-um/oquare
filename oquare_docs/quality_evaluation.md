@@ -34,10 +34,3 @@ There are two types of static scale
 ## Dynamic scaling Functions
 
 For defining a Dynamic scale, each ontology in such a corpus is processed with OQuaRE, so calculating the raw values of the quality metrics. These original values are used for generating a scale in k categories determined by k-means clustering [1], which groups similar values into the same category by minimising the intra-class variance and emphasises the differences among categories maximising the interclass variance. the number of categories is defined by the k value.  In the use case defined in [1], the k = 5 because the OQuaRE scale is [1,5].
-
-## Publications
-
-1. **Astrid Duque-Ramos**, Quesada-Martínez, M., Iniesta-Moreno, M., Fernández-Breis, J.T., Stevens, R.  
-   *Supporting the analysis of ontology evolution processes through the combination of static and dynamic scaling functions in OQuaRE.*  
-   *Journal of Biomedical Semantics*, Volume **7**, Nº 63, 2016.  
-   DOI: [10.1186/s13326-016-0091-z](https://doi.org/10.1186/s13326-016-0091-z)

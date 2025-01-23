@@ -12,11 +12,11 @@ The current OQuaRE version includes 8 characteristics (7 from SQuaRE and 1 espec
 
 The **Structural Characteristic** is introduced to evaluate aspects not covered by SQuaRE, such as consistency, formalization, redundancy, or tangledness. 
 
-The **Functional adequacy** subcharacteristics are the intended uses for ontologies identified in [1].
+The **Functional adequacy** subcharacteristics are the intended uses for ontologies identified in [^1].
 
 
 <div align="center">
-  <img src="images/OQuaREQualityModel.png" alt="OQuaRE" width="700">
+  <img src="images_oquare_docs/OQuaREQualityModel.png" alt="OQuaRE" width="300">
 </div> 
 ---
 
@@ -109,11 +109,8 @@ The capability of ontologies to be modified for changes in environments, in requ
 ---
 
 ### REFERENCES
-[1]  STEVENS, R. and LORD, P. (2009): Application of ontologies in bioinformatics. In: BERNUS, P., BŁAŻEWICS, J., SCHMIDT, G., SHAW, M., STAAB, S. and STUDER, R. (eds.) Handbook on Ontologies. Springer Berlin Heidelberg.
+[^1]  STEVENS, R. and LORD, P. (2009): Application of ontologies in bioinformatics. In: BERNUS, P., BŁAŻEWICS, J., SCHMIDT, G., SHAW, M., STAAB, S. and STUDER, R. (eds.) Handbook on Ontologies. Springer Berlin Heidelberg.
 
 ### Publications
 
- **A. Duque-Ramos**, J. T. Fernández-Breis, R. Stevens, N. Aussenac-Gilles.  
-   *OQuaRE: a SQuaRE-based approach for evaluating the quality of ontologies.*  
-   *Journal of Research and Practice in Information Technology*, Volume **43**, 2011, Pages 159–173.  
-   DOI: [10.1.1.363.7967](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.363.7967)
+
