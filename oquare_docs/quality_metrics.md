@@ -23,8 +23,9 @@ For the the definition of the base metrics, the following notation has been adop
 ## Derived Metrics and Formulas  
 
 ### **LCOMOnto - Lack of Cohesion in Methods** 
-Mean lenght of all paht from leaf classes to **Thing**..  
-$$LCOMOnto = \frac{\sum {Length(path(|C({leaf})_i|))}}{{\sum {path(|C({leaf})_i|)}}}$$
+Mean lenght of all paht from leaf classes to **Thing**.
+
+$${LCOMOnto} = \frac{\sum {Length(path(|C({leaf})_i|))}}{{\sum {path(|C({leaf})_i|)}}}$$
 
 - **Where**:  
   - ${Length(path(|C({leaf})_i|))}$ is the length of the path from the leaf class *i* to **Thing**.  
@@ -67,19 +68,20 @@ Number of direct subclasses divided by the number of classes minus the number of
 
 $${NOCOnto} = \frac{\sum |RC_i|}{\left( \sum |C_i| - \sum |C(leaf)_i| \right)}$$  
 
-| Metric/Score | 1   | 2       | 3       | 4       | 5      |
-|--------------|------|---------|---------|---------|--------|
-| NOCOnto      | >8   | (6-8]   | (4-6]   | (2-4]   | [1-2]  |
+| Metric/Score | 1    | 2        | 3        | 4        | 5       |
+|--------------|-------|----------|----------|----------|---------|
+| NOCOnto      | >12   | (8-12]   | (6-8]    | (3-6]    | [1-3]   |
 
 ---
 
 ### **CBOOnto - Coupling Between Objects**  
 Number of related classes.  
+
 $${CBOOnto} = \frac{\sum |SupC_i|}{\left( \sum |C_i| - |R_{{Thing}}| \right)}$$  
 
-| Metric/Score | 1    | 2        | 3        | 4        | 5       |
-|--------------|-------|----------|----------|----------|---------|
-| CBOOnto      | >12   | (8-12]   | (6-8]    | (3-6]    | [1-3]   |
+| Metric/Score | 1   | 2       | 3       | 4       | 5      |
+|--------------|------|---------|---------|---------|--------|
+| NACOnto      | >8   | (6-8]   | (4-6]   | (2-4]   | [1-2]  |
 
 ---
 ### **CBOOnto2 - Coupling Between Objects**  
@@ -87,9 +89,10 @@ Number of related classes.
 
 $${CBOOnto2} = \frac{\sum |SupC_i|}{\sum |C_i|}$$  
 
-| Metric/Score | 1    | 2        | 3        | 4        | 5       |
-|--------------|-------|----------|----------|----------|---------|
-| CBOOnto2      | >12   | (8-12]   | (6-8]    | (3-6]    | [1-3]   |
+| Metric/Score | 1       | 2          | 3          | 4          | 5        |
+|--------------|---------|------------|------------|------------|----------|
+| 1/CBOnto2    | [0-20]% | (20-40]%   | (40-60]%   | (60-80]%   | >80%     |
+
 
 ### **RFCOnto - Response for a Class**  
 Number of properties directly accessible from a class, including data and object properties.  
@@ -141,7 +144,7 @@ $$POnto = \sum|SupC_i| / \sum|C_i|$$
 
 | Metric/Score | 1       | 2          | 3          | 4          | 5        |
 |--------------|---------|------------|------------|------------|----------|
-| POnto        | [0-20]% | (20-40]%   | (40-60]%   | (60-80]%   | >80%     |
+| 1/POnto        | [0-20]% | (20-40]%   | (40-60]%   | (60-80]%   | >80%     |
 
 ---
 
@@ -192,7 +195,7 @@ $$TMOnto = \sum|C(DP)ᵢ| / (\sum|C_i| - 1)$$
 
 | Metric/Score | 1     | 2        | 3        | 4        | 5        |
 |--------------|-------|----------|----------|----------|----------|
-| TMOnto       | >8    | (6-8]    | (4-6]    | (2-4]    | (1-2]    |
+| TMOnto       | >40%  | (30-40]% | (20-30]% | (10-20]% | [0-10]%  |
 
 ---
 
@@ -205,16 +208,16 @@ $$TMOnto2 = \sum|Sup(CDP)ᵢ| / \sum|CDPᵢ|$$
   - **Sup(CDP)ᵢ**: Superclasses of classes with more than one direct parent.  
   - **CDPᵢ**: Classes with more than one direct parent.  
 
-| Metric/Score | 1     | 2        | 3        | 4        | 5        |
-|--------------|-------|----------|----------|----------|----------|
-| TMOnto2      | >8    | (6-8]    | (4-6]    | (2-4]    | (1-2]    |
+| Metric/Score | 1       | 2          | 3          | 4          | 5        |
+|--------------|---------|------------|------------|------------|----------|
+| 1/TMOnto2    | [0-20]% | (20-40]%   | (40-60]%   | (60-80]%   | >80%     |
 
 ---
 
 ### **WMCOnto - Weighted Method per Class**  
 Measures the mean length of paths from a leaf class to the **Thing**.   
 
-$$WMCOnto = \sum Length(path(|C(leaf)ᵢ|)) / \sum|C(leaf)ᵢ|$$  
+$${WMCOnto}= \sum Length(path(|C(leaf)ᵢ|)) / \sum|C(leaf)ᵢ|$$  
 
 - **Where**:  
   - $Length(path(|C(leaf)ᵢ|))$ is the length of the path from the *i*-th leaf class to **Thing**.  
@@ -222,21 +225,22 @@ $$WMCOnto = \sum Length(path(|C(leaf)ᵢ|)) / \sum|C(leaf)ᵢ|$$
 
 | Metric/Score | 1     | 2        | 3        | 4        | 5        |
 |--------------|-------|----------|----------|----------|----------|
-| WMCOnto      | >8    | (6-8]    | (4-6]    | (2-4]    | [1-2]    |
+| WMCOnto      | >15    | (11-15]    | (8-11]    | (5-8]    | <=5    |
 
 ---
 
 ### **WMCOnto2 - Weighted Method per Class 2**  
 Measures the mean number of paths from a leaf class to the class **Thing**. 
-$$WMCOnto2 = \sum path(|C(leaf)ᵢ|) / \sum|C(leaf)ᵢ|$$  
+
+$${WMCOnto2} = \sum path(|C(leaf)ᵢ|) / \sum|C(leaf)ᵢ|$$  
 
 - **Where**:  
   - $path(|C(leaf)ᵢ|)$ is the number of paths from the *i*-th leaf class to **Thing**.  
   - **C(leaf)ᵢ** is the leaf classes in the ontology.  
 
-| Metric/Score | 1     | 2        | 3        | 4        | 5        |
-|--------------|-------|----------|----------|----------|----------|
-| WMCOnto2     | >8    | (6-8]    | (4-6]    | (2-4]    | [1-2]    |
+| Metric/Score | 1       | 2          | 3          | 4          | 5        |
+|--------------|---------|------------|------------|------------|----------|
+| 1/WMCOnto2   | [0-20]% | (20-40]%   | (40-60]%   | (60-80]%   | >80%     |
 
 ---
 
