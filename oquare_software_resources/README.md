@@ -1,6 +1,10 @@
-[OQuaRE](../README.md)
+In this page we describe the software resources that are publicly available:
+* The OQuaRE GitHub Action
+* The web page for calculating the OQuaRE metrics for a corpus of ontologies
+* The REST API
 
-# GitHub Actions: Ontology Quality Evaluation
+
+# The OQuaRE GitHub Action
 
 This module leverages the **OQuaRE framework** to automatically evaluate and generate quality metrics for ontology files. For ontologies with multiple versions, the metrics reflect changes over time, representing the evolution of the ontology. It produces visual reports that highlight the quality of each ontology, providing clear insights into their strengths and weaknesses, as shown in Figures 1, 2, and 3. Figure 1 and Figure 2 represent quality characteristics and metrics for a specific ontology, while Figure 3 specifically illustrates the values for the subcharacteristic functional adequacy across four versions of the ontology, represented on the X-axis. The module extends these capabilities to ontology **repositories hosted on GitHub**, enabling the evaluation of ontologies through a standardized system seamlessly integrated into GitHub workflows. This approach offers ontology developers and researchers an efficient way to assess and improve ontology quality. The GitHub Actions repository can be found at:
 https://github.com/tecnomod-um/oquare-metrics
@@ -23,3 +27,7 @@ involves two primary steps:
 
 The page provides visualizations  The page also includes sample corpora and result files, as well as guidance on interpreting the outcomes of the evaluation, offering a complete overview of the methodology and its applications.
 
+## The REST API
+
+* [Services available](https://semantics.inf.um.es/ontology-metrics/doc-ws.html)
+* [How to use the REST API](https://semantics.inf.um.es/ontology-metrics/doc-tutorial1.html)
