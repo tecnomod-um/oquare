@@ -1,0 +1,5 @@
+
+.DS_Store
+/Automated_Analysis/appdata/
+.venv
+.idea
