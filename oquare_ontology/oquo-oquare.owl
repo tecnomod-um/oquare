@@ -2598,9 +2598,9 @@
         <rdf:type rdf:resource="https://purl.org/oquo#Interval"/>
         <hasIntervalLowerBoundType rdf:resource="https://purl.org/oquo#ClosedIntervalBound"/>
         <hasIntervalUpperBoundType rdf:resource="https://purl.org/oquo#ClosedIntervalBound"/>
-        <hasIntervalLowerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</hasIntervalLowerValue>
+        <hasIntervalLowerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</hasIntervalLowerValue>
         <hasIntervalUpperValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</hasIntervalUpperValue>
-        <rdfs:label>interval [1.0..3.0]</rdfs:label>
+        <rdfs:label>interval [0.0..3.0]</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3479,7 +3479,7 @@
         <rdf:type rdf:resource="https://purl.org/oquo#CardinalToOrdinalScalePointMapping"/>
         <hasInputCardinalInterval rdf:resource="https://purl.org/oquo#interval-a3c4b50f-219a-45f5-b398-40e4dd772f59"/>
         <hasOutputScaleCategory rdf:resource="https://purl.org/oquo#OquareCategory5"/>
-        <rdfs:label>mapping [1.0..3.0] -&gt; 5 (Exceeds the requirements)</rdfs:label>
+        <rdfs:label>mapping [0.0..3.0] -&gt; 5 (Exceeds the requirements)</rdfs:label>
     </owl:NamedIndividual>
     
 
