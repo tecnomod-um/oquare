@@ -1438,80 +1438,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
-                <owl:hasValue rdf:resource="https://purl.org/oquo#WeightMethodPerClass2MetricScale"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Mean number of path from Thing to a leaf class per leaf class WMCOnto2=∑path(|C(leaf)i|)/∑|C(leaf)i| , where path|C(leaf)i| is the number of the path from the leaf class i to Thing </obo:IAO_0000115>
-        <rdf1:acronym>WMCOnto2</rdf1:acronym>
-        <rdfs:comment>Mean number of path from Thing to a leaf class per leaf class.</rdfs:comment>
-        <rdfs:label>weight method per class 2 metric</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.org/oquo#WeightMethodPerClassMetric -->
-
-    <owl:Class rdf:about="https://purl.org/oquo#WeightMethodPerClassMetric">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/QualityModel#DerivedMeasure"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
-                        <owl:allValuesFrom rdf:resource="https://purl.org/oquo#RecoverabilityCharacteristic"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://purl.org/oquo#AdaptabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#AnalysabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#ChangeabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#LearnabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#ModificationStabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#ModularityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#ReplaceabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#ReusabilityCharacteristic"/>
-                                    <rdf:Description rdf:about="https://purl.org/oquo#TestabilityCharacteristic"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://purl.org/oquo#RawScale"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasRankigFunction"/>
-                                <owl:hasValue rdf:resource="http://purl.org/net/QualityModel#LowerBest"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#RecoverabilityCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#AdaptabilityCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/oquo#AnalysabilityCharacteristic"/>
             </owl:Restriction>
@@ -1543,7 +1469,127 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#ReplaceabilityCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#RecoverabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#ReusabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#TanglednessCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#TestabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://purl.org/oquo#AnalysabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ChangeabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#LearnabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ModificationStabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ModularityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#RecoverabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ReusabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#TanglednessCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#TestabilityCharacteristic"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
+                <owl:hasValue rdf:resource="https://purl.org/oquo#WeightMethodPerClass2MetricScale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Mean number of path from Thing to a leaf class per leaf class WMCOnto2=∑path(|C(leaf)i|)/∑|C(leaf)i| , where path|C(leaf)i| is the number of the path from the leaf class i to Thing </obo:IAO_0000115>
+        <rdf1:acronym>WMCOnto2</rdf1:acronym>
+        <rdfs:comment>Mean number of path from Thing to a leaf class per leaf class.</rdfs:comment>
+        <rdfs:label>weight method per class 2 metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/oquo#WeightMethodPerClassMetric -->
+
+    <owl:Class rdf:about="https://purl.org/oquo#WeightMethodPerClassMetric">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/QualityModel#DerivedMeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://purl.org/oquo#AnalysabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ChangeabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#LearnabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ModificationStabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#RecoverabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#ReusabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo#TestabilityCharacteristic"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://purl.org/oquo#RawScale"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasRankigFunction"/>
+                                <owl:hasValue rdf:resource="http://purl.org/net/QualityModel#LowerBest"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#RecoverabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#AnalysabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#ChangeabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#LearnabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo#ModificationStabilityCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
