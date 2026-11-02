@@ -16,7 +16,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:QualityModel="http://purl.org/net/QualityModel#">
     <owl:Ontology rdf:about="https://purl.org/oquo-oquare">
-        <owl:imports rdf:resource="https://purl.org/oquo-core"/>
+        <owl:imports rdf:resource="https://purl.org/oquo-oquare-qm"/>
     </owl:Ontology>
     
 
