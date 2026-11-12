@@ -1,38 +1,42 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.org/oquo-oquare#"
      xml:base="https://purl.org/oquo-oquare"
-     xmlns:oquo="https://purl.org/oquo#"
-     xmlns:oquo-oquare-qm="https://purl.org/oquo-oquare-qm#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:oquo="https://purl.org/oquo#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdf1="http://www.cropontology.org/rdf/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:QualityModel="http://purl.org/net/QualityModel#">
+     xmlns:QualityModel="http://purl.org/net/QualityModel#"
+     xmlns:oquo-oquare-qm="https://purl.org/oquo-oquare-qm#">
     <owl:Ontology rdf:about="https://purl.org/oquo-oquare">
-        <owl:versionIRI rdf:resource="https://purl.org/oquo-oquare/v2.0.0"/>
-        <owl:imports rdf:resource="https://purl.org/oquo-oquare-qm/v2.0.0"/>
-        <dc:title xml:lang="en">OQUO OQuaRE metrics module</dc:title>
+        <owl:versionIRI rdf:resource="https://purl.org/oquo-oquare/v2.0.1"/>
+        <owl:imports rdf:resource="https://purl.org/oquo-oquare-qm"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0001-6233-6384"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0003-0201-3115"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0002-7558-2880"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0001-6233-6384"/>
         <dc:description xml:lang="en">OQUO module that defines the metrics of OQuaRE (Ontology Quality Requirements and Evaluation), a framework for evaluating the quality of ontologies based on the SQuaRE (ISO/IEC 25000) standard. The module defines 20 OQuaRE metrics, most of them adapted from software engineering metrics to the structure of ontologies (e.g. depth of subsumption hierarchy, lack of cohesion in methods, tangledness or relationship richness), and associates them, positively or negatively, with the characteristics and subcharacteristics of the OQuaRE quality model that they measure. For 18 of these metrics, the module defines their raw scales and the conversions of these raw scales into the OQuaRE five categories scale by means of cardinal to ordinal scale conversions.</dc:description>
+        <dc:publisher>Universidad de Murcia</dc:publisher>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
+        <dc:title xml:lang="en">OQUO OQuaRE metrics module</dc:title>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-11</terms:created>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <dc:source xml:lang="en">Duque-Ramos, A., Fernández-Breis, J. T., Stevens, R., Aussenac-Gilles, N. (2011). OQuaRE: A SQuaRE-based approach for evaluating the quality of ontologies. Journal of Research and Practice in Information Technology, 43(2), 159-176.</dc:source>
-        <dc:creator>Astrid Duque-Ramos</dc:creator>
-        <dc:contributor>Astrid Duque-Ramos</dc:contributor>
-        <dc:contributor>Francisco Abad-Navarro</dc:contributor>
-        <dc:contributor>Jesualdo Tomas Fernandez-Breis</dc:contributor>
-        <dc:publisher>Universidad de Murcia</dc:publisher>
         <vann:preferredNamespacePrefix>oquo-oquare</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://purl.org/oquo-oquare#</vann:preferredNamespaceUri>
-        <rdfs:seeAlso rdf:resource="https://github.com/tecnomod-um/oquare"/>
+        <schema:codeRepository rdf:resource="https://github.com/tecnomod-um/oquare"/>
     </owl:Ontology>
     
 
@@ -159,6 +163,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of direct ancestor per class POnto=∑|SupCi| /∑|Ci| </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>POnto</rdf1:acronym>
         <rdfs:label>ancestors per class metric</rdfs:label>
     </owl:Class>
@@ -245,6 +250,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of annotation properties per class ANOnto=∑|ACi| /∑|Ci|; where Ci is the i-th class in the ontology </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>ANOnto</rdf1:acronym>
         <rdfs:comment>Mean number of annotation properties per class.</rdfs:comment>
         <rdfs:label>annotation richness metric</rdfs:label>
@@ -346,6 +352,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of restrictions of the ontology per classes AROnto=∑|AttCi| / ∑|Ci |; where AttCi, is the set of Attributes of the Ci </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>AROnto</rdf1:acronym>
         <rdfs:comment>Number of restrictions of the ontology per classes.</rdfs:comment>
         <rdfs:label>attribute richness metric</rdfs:label>
@@ -405,6 +412,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of individuals per class CROnto=∑| ICi| / ∑|Ci |; where ICi, is the set ofindividuals of the Ci </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>CROnto</rdf1:acronym>
         <rdfs:comment>Mean number of individuals per class.</rdfs:comment>
         <rdfs:label>class richness metric</rdfs:label>
@@ -445,6 +453,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Checks if the ontology is consistent or not.</obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdfs:label>consistency metric</rdfs:label>
     </owl:Class>
     
@@ -544,6 +553,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of related classes. Number of direct ancestor of classes divided by the number of classes minus subclasses of Thing CBOOnto=∑|SupCi|/(∑|Ci| -| RThing|) </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>CBOOnto</rdf1:acronym>
         <rdfs:comment>Number of related classes. Number of direct ancestor of classes divided by the number of classes minus subclasses of Thing.</rdfs:comment>
         <rdfs:label>coupling between objects metric</rdfs:label>
@@ -645,6 +655,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Length of the largest path from Thing to a leaf class DITOnto=Max (∑D|Ci|), where Ci are the classes and D|Ci| is the length of the path from the i-thleaf class of the ontology to Thing </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>DITOnto</rdf1:acronym>
         <rdfs:comment>Length of the largest path from Thing to a leaf class.</rdfs:comment>
         <rdfs:label>depth of subsumption hierarchy metric</rdfs:label>
@@ -717,6 +728,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>formal degree metric</rdfs:label>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
     </owl:Class>
     
 
@@ -815,6 +827,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Semantic and conceptual relatedness of classes. It can be used to measure the separation of responsibilities and independence of components of ontologies LCOMOnto=∑Lenght(path(|C(leaf)i|))/m , where Lenght(path|C(leaf)i|) is the length of the path from the leaf class i to Thing, and m is the total number of paths in the ontology </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>LCOMOnto</rdf1:acronym>
         <rdfs:comment>Semantic and conceptual relatedness of classes.</rdfs:comment>
         <rdfs:label>lack of cohesion in methods metric</rdfs:label>
@@ -867,6 +880,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of ancestor classes per leaf class. It is the number of direct superclasses per leaf class NACOnto=∑|SupC(Leaf)i|/∑|C(leaf)i)| </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>NACOnto</rdf1:acronym>
         <rdfs:comment>Mean number of ancestor classes per leaf class.</rdfs:comment>
         <rdfs:label>number of ancestor classes metric</rdfs:label>
@@ -960,6 +974,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of the direct subclasses divided by the number of classes minus the number of leaf classes NOCOnto=∑|RCi|/(∑|Ci| - ∑|C(leaf)i)|) </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>NOCOnto</rdf1:acronym>
         <rdfs:comment>Number of the direct subclasses divided by the number of classes minus the number of leaf classes</rdfs:comment>
         <rdfs:label>number of children classes metric</rdfs:label>
@@ -1024,12 +1039,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#RecoverabilityCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#AnalysabilityCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1037,18 +1046,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#ChangeabilityCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#KnowledgeAcquisitionRepresentationCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#KnowledgeReuseCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1061,6 +1058,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#ModificationStabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicNegatively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#RecoverabilityCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1083,11 +1086,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#KnowledgeAcquisitionRepresentationCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#KnowledgeReuseCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
                 <owl:hasValue rdf:resource="https://purl.org/oquo-oquare#NumberOfPropertiesMetricScale"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of properties per class. Mean number of object and data property usages per class NOMOnto=∑| PCi|∕∑|Ci| </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>NOMOnto</rdf1:acronym>
         <rdfs:comment>Number of properties per class. Mean number of object and data property usages per class.</rdfs:comment>
         <rdfs:label>number of properties metric</rdfs:label>
@@ -1154,6 +1170,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of subclassof relationships divided by the number of subclassof relationships and properties PROnto=∑|RCi| ∕∑(|RCi| + ∑|PCi|)</obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>RROnto</rdf1:acronym>
         <rdfs:comment>Number of subclassof relationships divided by the number of subclassof relationships and properties.</rdfs:comment>
         <rdfs:label>properties richness metric</rdfs:label>
@@ -1255,6 +1272,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of usages of object and data properties divided by the number of subclassof relations and properties RROnto=∑|PCi| ∕∑(|RCi| + ∑|PCi|)</obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>PROnto</rdf1:acronym>
         <rdfs:comment>Number of usages of object and data properties divided by the number of subclassof relations and properties</rdfs:comment>
         <rdfs:label>relationship richness metric</rdfs:label>
@@ -1335,6 +1353,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of subclasses per class INROnto=∑| RCi| /∑|Ci| </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>INROnto</rdf1:acronym>
         <rdfs:comment>Mean number of subclasses per class</rdfs:comment>
         <rdfs:label>relationships per class metric</rdfs:label>
@@ -1429,6 +1448,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of properties that can be directly accessed from the class. number of usages of object and data properties and superclasses divided by the number of classes RFCOnto=(∑|PCi|+∑|SupCi|/(∑|Ci| </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>RFCOnto</rdf1:acronym>
         <rdfs:comment>Number of properties that can be directly accessed from the class.</rdfs:comment>
         <rdfs:label>response for a class metric</rdfs:label>
@@ -1488,6 +1508,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of direct ancestor of classes with more than 1 direct ancestor. TMOnto2=∑|SUP(CDP)i|/∑|CDPi|; where Ci is the i-th class in the ontology and SUP(CDP)i is the supperclass of the thei-th class in the ontology with more than one direct parent </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>TMOnto2</rdf1:acronym>
         <rdfs:comment>Mean number of direct ancestor of classes with more than 1 direct ancestor.</rdfs:comment>
         <rdfs:label>tangledness 2 metric</rdfs:label>
@@ -1547,6 +1568,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of classes with more than 1 direct ancestor TMOnto=∑|C(DP)i|/∑|Ci|-1; where Ci is the i-th class in the ontology and C(DP)i is thei-th class in the ontology with more than one direct parent </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>TMOnto</rdf1:acronym>
         <rdfs:comment>Mean number of classes with more than 1 direct ancestor</rdfs:comment>
         <rdfs:label>tangledness metric</rdfs:label>
@@ -1655,6 +1677,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean number of path from Thing to a leaf class per leaf class WMCOnto2=∑path(|C(leaf)i|)/∑|C(leaf)i| , where path|C(leaf)i| is the number of the path from the leaf class i to Thing </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>WMCOnto2</rdf1:acronym>
         <rdfs:comment>Mean number of path from Thing to a leaf class per leaf class.</rdfs:comment>
         <rdfs:label>weight method per class 2 metric</rdfs:label>
@@ -1666,24 +1689,6 @@
 
     <owl:Class rdf:about="https://purl.org/oquo-oquare#WeightMethodPerClassMetric">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/QualityModel#DerivedMeasure"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#AnalysabilityCharacteristic"/>
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#ChangeabilityCharacteristic"/>
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#LearnabilityCharacteristic"/>
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#ModificationStabilityCharacteristic"/>
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#RecoverabilityCharacteristic"/>
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#ReusabilityCharacteristic"/>
-                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#TestabilityCharacteristic"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
@@ -1698,12 +1703,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#RecoverabilityCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1733,6 +1732,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#RecoverabilityCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/oquo-oquare-qm#ReusabilityCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1744,11 +1749,30 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/oquo#measuresCharacteristicPositively"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#AnalysabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#ChangeabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#LearnabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#ModificationStabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#RecoverabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#ReusabilityCharacteristic"/>
+                            <rdf:Description rdf:about="https://purl.org/oquo-oquare-qm#TestabilityCharacteristic"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/net/QualityModel#hasScale"/>
                 <owl:hasValue rdf:resource="https://purl.org/oquo-oquare#WeightMethodPerClassMetricScale"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Mean length of the path from Thing to a leaf class WMCOnto=∑Lenght(path(|C(leaf)i|))/∑|C(leaf)i|, where Lenght(path|C(leaf)i|) is the length of the path from the leaf class i to Thing </obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
         <rdf1:acronym>WMCOnto</rdf1:acronym>
         <rdfs:comment>Mean length of the path from Thing to a leaf class.</rdfs:comment>
         <rdfs:label>weight method per class metric</rdfs:label>
@@ -3149,6 +3173,20 @@
         <oquo:hasIntervalLowerValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.8</oquo:hasIntervalLowerValue>
         <oquo:hasIntervalUpperValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">INF</oquo:hasIntervalUpperValue>
         <rdfs:label>interval (0.8..Infinity)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/oquo-oquare#oquare-software-agent -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/oquo-oquare#oquare-software-agent">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <obo:IAO_0000115 xml:lang="en">The software implementation of OQuaRE (Ontology Quality Requirements and Evaluation), a framework for evaluating the quality of ontologies based on the SQuaRE (ISO/IEC 25000) standard. Given an ontology, it computes the OQuaRE metrics, most of them adapted from software engineering metrics to the structure of ontologies (e.g. depth of subsumption hierarchy, lack of cohesion in methods, tangledness or relationship richness). It acts as the agent of the evaluations whose results are described with this module.</obo:IAO_0000115>
+        <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
+        <schema:codeRepository rdf:resource="https://github.com/tecnomod-um/oquare"/>
+        <rdfs:comment xml:lang="en">Software that implements the OQuaRE framework and computes its metrics.</rdfs:comment>
+        <rdfs:label>oquare software agent</rdfs:label>
+        <foaf:homepage rdf:resource="https://github.com/tecnomod-um/oquare"/>
     </owl:NamedIndividual>
     
 
