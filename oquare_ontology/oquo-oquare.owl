@@ -22,7 +22,7 @@
      xmlns:QualityModel="http://purl.org/net/QualityModel#"
      xmlns:oquo-oquare-qm="https://purl.org/oquo-oquare-qm#">
     <owl:Ontology rdf:about="https://purl.org/oquo-oquare">
-        <owl:versionIRI rdf:resource="https://purl.org/oquo-oquare/v2.0.1"/>
+        <owl:versionIRI rdf:resource="https://purl.org/oquo-oquare/v2.0.2"/>
         <owl:imports rdf:resource="https://purl.org/oquo-oquare-qm"/>
         <dc:contributor rdf:resource="https://orcid.org/0000-0001-6233-6384"/>
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-0201-3115"/>
@@ -1171,7 +1171,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of subclassof relationships divided by the number of subclassof relationships and properties PROnto=∑|RCi| ∕∑(|RCi| + ∑|PCi|)</obo:IAO_0000115>
         <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
-        <rdf1:acronym>RROnto</rdf1:acronym>
+        <rdf1:acronym>PROnto</rdf1:acronym>
         <rdfs:comment>Number of subclassof relationships divided by the number of subclassof relationships and properties.</rdfs:comment>
         <rdfs:label>properties richness metric</rdfs:label>
     </owl:Class>
@@ -1273,7 +1273,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Number of usages of object and data properties divided by the number of subclassof relations and properties RROnto=∑|PCi| ∕∑(|RCi| + ∑|PCi|)</obo:IAO_0000115>
         <dc:source rdf:resource="https://doi.org/10.3316/informit.265844843145749"/>
-        <rdf1:acronym>PROnto</rdf1:acronym>
+        <rdf1:acronym>RROnto</rdf1:acronym>
         <rdfs:comment>Number of usages of object and data properties divided by the number of subclassof relations and properties</rdfs:comment>
         <rdfs:label>relationship richness metric</rdfs:label>
     </owl:Class>
